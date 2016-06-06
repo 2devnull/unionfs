@@ -28,7 +28,7 @@ fi
 mkdir -p $MOUNT_TARGET
 
 # Cleanup any existing mount
-fusermount -u $MOUNT_TARGET
+umount -f $MOUNT_TARGET
 
 # Mount away!
 exec unionfs-fuse -d -o cow,allow_other $MOUNT_UNITE $MOUNT_TARGET
